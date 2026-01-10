@@ -1,0 +1,36 @@
+{
+  "projects": [
+    {
+      "title": "Automated Vulnerability Scanner",
+      "timeline": "Jan – Mar 2025",
+      "stack": ["Python", "Requests", "BeautifulSoup"],
+      "highlights": [
+        "Built web vulnerability scanner detecting XSS, SQLi, and CSRF across 15+ vectors",
+        "Automated crawling scanning 500+ URLs per session and found 35+ critical vulns",
+        "Multi-threaded scanning (10 concurrent requests) improved speed 3.5x",
+        "Custom payload generation engine with 200+ attack signatures and stealth mode"
+      ]
+    },
+    {
+      "title": "Enterprise Phishing Awareness Simulation",
+      "timeline": "Aug – Sep 2024",
+      "stack": ["Gophish", "SocialFish", "Python", "Flask", "Chart.js"],
+      "highlights": [
+        "Ran controlled phishing simulation on 150+ participants (23% click-through rate)",
+        "Designed 5 realistic scenarios and tracked 300+ interaction data points",
+        "Produced 20-page awareness report reducing susceptibility by 60% post-training",
+        "Built dashboard showing open rate, clicks, and credential submissions"
+      ]
+    },
+    {
+      "title": "CTF Champion (College Competition)",
+      "timeline": "Apr 2025",
+      "stack": ["Web Exploitation", "Forensics", "Crypto"],
+      "highlights": [
+        "Led 3-member team to 1st place against 15 teams",
+        "Solved 18/25 challenges scoring 3200 points in 24-hour contest",
+        "Exploited SQLi, XSS, privilege escalation, and reverse engineering tasks"
+      ]
+    }
+  ]
+}	

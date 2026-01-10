@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chandragiriprasad Moorman | Cybersecurity Portfolio</title>
+
+  <meta name="description" content="Cybersecurity Specialist | Ethical Hacker | Penetration Tester | Portfolio" />
+  <meta name="theme-color" content="#030712" />
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Background -->
+  <div class="bg-layer">
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div>
+    <div class="bg-grid"></div>
+    <canvas id="matrix"></canvas>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="brand">
+      <span class="logo">CM</span>
+      <span class="brand-text">Chandragiriprasad Moorman</span>
+    </div>
+
+    <nav class="navlinks" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="btn small" href="assets/resume/resume.pdf" download>Download Resume</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left reveal">
+        <div class="status-pill">
+          <span class="dot"></span>
+          <span>TryHackMe: Top 10% India</span>
+        </div>
+
+        <h1 class="title">
+          Cybersecurity Specialist
+          <span class="gradient-text">Ethical Hacker</span>
+        </h1>
+
+        <p class="subtitle">
+          I do penetration testing, vulnerability assessments, and build security automation tools.
+          I love breaking systems (ethically) and making them stronger.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#contact">Contact Me</a>
+        </div>
+
+        <div class="quick-info">
+          <div class="card mini">
+            <h4>Location</h4>
+            <p>Bengaluru, Karnataka</p>
+          </div>
+          <div class="card mini">
+            <h4>Focus</h4>
+            <p>Web + Network Security</p>
+          </div>
+          <div class="card mini">
+            <h4>Availability</h4>
+            <p>Immediate (Internship/Entry)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="profile-card">
+          <div class="pfp-wrap">
+            <img class="pfp" src="assets/img/profile.jpg" alt="Profile Photo" />
+          </div>
+
+          <div class="profile-info">
+            <h2>Chandragiriprasad Moorman</h2>
+            <p class="muted">Penetration Tester • Security Researcher</p>
+          </div>
+
+          <div class="badges">
+            <span class="badge">OWASP Top 10</span>
+            <span class="badge">Burp Suite</span>
+            <span class="badge">Nmap</span>
+            <span class="badge">CTF Winner</span>
+          </div>
+
+          <div class="socials">
+            <a href="https://linkedin.com/in/chandragiriprasad-moorman" target="_blank">LinkedIn</a>
+            <a href="https://github.com/chandumoorman" target="_blank">GitHub</a>
+            <a href="mailto:chandumoorman@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section reveal" id="about">
+      <div class="section-header">
+        <h2>About</h2>
+        <p class="muted">Professional summary from my resume</p>
+      </div>
+
+      <div class="card">
+        <p>
+          Results-driven cybersecurity specialist with proven expertise in penetration testing and vulnerability assessment.
+          Achieved <b>Top 10% ranking</b> on TryHackMe India Leaderboard by completing 20+ advanced labs.
+          Built security automation tools that improved scanning efficiency by <b>40%</b>, executed phishing simulations impacting
+          150+ users, and secured <b>1st place</b> in a competitive college CTF.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-num">20+</span>
+            <span class="stat-label">Security Labs</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">40%</span>
+            <span class="stat-label">Scan Efficiency Boost</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">1st</span>
+            <span class="stat-label">CTF Champion</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section reveal" id="education">
+      <div class="section-header">
+        <h2>Education</h2>
+        <p class="muted">Academic background</p>
+      </div>
+
+      <div class="card timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>B.E. Computer Science & Engineering</h3>
+            <p class="muted">
+              Cambridge Institute of Technology, Bengaluru • Expected May 2026 • 7th Semester
+            </p>
+            <p>
+              Relevant Coursework: Network Security, Cryptography, Operating Systems, DSA, DBMS,
+              Computer Networks, Web Technologies, Cloud Computing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section reveal" id="skills">
+      <div class="section-header">
+        <h2>Skills</h2>
+        <p class="muted">Tools, programming, domains</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Security Tools</h3>
+          <div class="chips">
+            <span class="chip">Nmap</span>
+            <span class="chip">Burp Suite Pro</span>
+            <span class="chip">Metasploit</span>
+            <span class="chip">Wireshark</span>
+            <span class="chip">Nikto</span>
+            <span class="chip">Hydra</span>
+            <span class="chip">John the Ripper</span>
+            <span class="chip">Gobuster</span>
+            <span class="chip">Hashcat</span>
+            <span class="chip">SQLMap</span>
+            <span class="chip">Aircrack-ng</span>
+            <span class="chip">Netcat</span>
+            <span class="chip">OWASP ZAP</span>
+            <span class="chip">Dirbuster</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Programming & Platforms</h3>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">Bash</span>
+            <span class="chip">PowerShell</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">SQL</span>
+            <span class="chip">PHP</span>
+            <span class="chip">C/C++</span>
+            <span class="chip">Kali Linux</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Kubernetes</span>
+            <span class="chip">VirtualBox</span>
+            <span class="chip">AWS EC2</span>
+            <span class="chip">Git/GitHub</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Security Domains</h3>
+          <div class="chips">
+            <span class="chip">OWASP Top 10</span>
+            <span class="chip">Web App Security</span>
+            <span class="chip">Network Pentesting</span>
+            <span class="chip">OSINT</span>
+            <span class="chip">Social Engineering</span>
+            <span class="chip">Threat Modeling</span>
+            <span class="chip">Incident Response</span>
+            <span class="chip">Digital Forensics</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Networking</h3>
+          <div class="chips">
+            <span class="chip">TCP/IP</span>
+            <span class="chip">DNS</span>
+            <span class="chip">HTTP/HTTPS</span>
+            <span class="chip">SSL/TLS</span>
+            <span class="chip">VPN</span>
+            <span class="chip">Firewalls</span>
+            <span class="chip">IDS/IPS</span>
+            <span class="chip">WPA2/WPA3</span>
+            <span class="chip">Subnetting</span>
+            <span class="chip">Routing Protocols</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section reveal" id="projects">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <p class="muted">Loaded from projects.json (easy to update)</p>
+      </div>
+
+      <div id="projects-grid" class="grid-2"></div>
+
+      <div class="card callout">
+        <h3>Easy Update Tip ✅</h3>
+        <p class="muted">
+          You can update projects anytime by editing <b>projects.json</b>. No need to touch HTML.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section reveal" id="contact">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p class="muted">Let’s connect</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Get in touch</h3>
+          <p class="muted">Email is the best way to reach me.</p>
+
+          <div class="contact-links">
+            <a class="contact" href="mailto:chandumoorman@gmail.com">
+              📩 chandumoorman@gmail.com
+            </a>
+            <a class="contact" href="https://github.com/chandumoorman" target="_blank">
+              💻 github.com/chandumoorman
+            </a>
+            <a class="contact" href="https://linkedin.com/in/chandragiriprasad-moorman" target="_blank">
+              🔗 linkedin.com/in/chandragiriprasad-moorman
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Resume</h3>
+          <p class="muted">Download my resume (PDF) directly:</p>
+          <a class="btn" href="assets/resume/resume.pdf" download>Download Resume</a>
+
+          <div class="divider"></div>
+
+          <h3>Achievements</h3>
+          <ul class="list">
+            <li>🏆 1st Place — College CTF Competition (April 2025)</li>
+            <li>🎯 TryHackMe — Top 10% India</li>
+            <li>🧪 Built scanning automation tools</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Chandragiriprasad Moorman • Built on Termux • Hosted on GitHub Pages</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
