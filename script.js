@@ -1,23 +1,34 @@
-/* MOBILE MENU */
+/* =========================
+   MOBILE MENU
+========================= */
 const hamburger = document.getElementById("hamburger");
 const navlinks = document.getElementById("navlinks");
 
-hamburger.addEventListener("click", () => {
-  navlinks.classList.toggle("open");
-});
-
-document.querySelectorAll(".navlinks a").forEach(link => {
-  link.addEventListener("click", () => {
-    navlinks.classList.remove("open");
+if (hamburger && navlinks) {
+  hamburger.addEventListener("click", () => {
+    navlinks.classList.toggle("open");
   });
-});
+
+  document.querySelectorAll(".navlinks a").forEach(link => {
+    link.addEventListener("click", () => {
+      navlinks.classList.remove("open");
+    });
+  });
+}
 
 
-/* AUTO YEAR */
-document.getElementById("year").textContent = new Date().getFullYear();
+/* =========================
+   AUTO YEAR
+========================= */
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
 
-/* REVEAL ANIMATION */
+/* =========================
+   REVEAL ANIMATION
+========================= */
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
@@ -35,29 +46,59 @@ window.addEventListener("load", revealOnScroll);
 window.addEventListener("scroll", revealOnScroll);
 
 
-/* MATRIX RAIN EFFECT */
+/* =========================
+   SCROLL PROGRESS BAR
+========================= */
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  const progress = (scrollTop / height) * 100;
+
+  const bar = document.getElementById("progress-bar");
+  if (bar) bar.style.width = progress + "%";
+});
+
+
+/* =========================
+   LOADER HIDE
+========================= */
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  if (loader) loader.style.display = "none";
+});
+
+
+/* =========================
+   MATRIX RAIN EFFECT
+========================= */
 const canvas = document.getElementById("matrix");
 
 if (canvas) {
   const ctx = canvas.getContext("2d");
 
+  let columns;
+  let drops;
+  const fontSize = 16;
+  const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&@";
+
   function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    columns = Math.floor(canvas.width / fontSize);
+    drops = Array(columns).fill(1);
   }
+
   resize();
   window.addEventListener("resize", resize);
 
-  const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&@";
-  const fontSize = 16;
-  const columns = Math.floor(window.innerWidth / fontSize);
-  const drops = Array(columns).fill(1);
-
   function draw() {
-    ctx.fillStyle = "rgba(2,6,23,0.06)";
+    ctx.fillStyle = "rgba(255,255,255,0.05)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "rgba(0,255,213,0.35)";
+    ctx.fillStyle = "rgba(14,165,233,0.35)";
     ctx.font = fontSize + "px monospace";
 
     for (let i = 0; i < drops.length; i++) {
