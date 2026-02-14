@@ -63,20 +63,29 @@ window.addEventListener("scroll", () => {
 
 
 /* =========================
-   LOADER HIDE
+   LOADER SAFE REMOVAL
 ========================= */
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
-  if (loader) loader.style.display = "none";
+
+  if (loader) {
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      loader.remove();
+    }, 500);
+  }
 });
 
 
 /* =========================
-   MATRIX RAIN EFFECT
+   MATRIX RAIN (OPTIMIZED)
 ========================= */
+
 const canvas = document.getElementById("matrix");
 
-if (canvas) {
+if (canvas && window.innerWidth > 768) {  // disable on small phones for stability
   const ctx = canvas.getContext("2d");
 
   let columns;
@@ -112,5 +121,10 @@ if (canvas) {
     }
   }
 
-  setInterval(draw, 40);
+  function animateMatrix() {
+    draw();
+    requestAnimationFrame(animateMatrix);
+  }
+
+  animateMatrix();
 }
