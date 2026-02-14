@@ -2,40 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chandragiriprasad Moorman | Portfolio</title>
 
-  <meta name="description" content="Cybersecurity & Software Development Portfolio" />
-  <meta name="theme-color" content="#030712" />
+  <meta name="description" content="Cybersecurity & Software Development Portfolio"/>
+  <meta name="theme-color" content="#030712"/>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
   <div class="brand">
     <span class="logo">CM</span>
     <span class="brand-text">Chandragiriprasad Moorman</span>
   </div>
 
-  <nav class="navlinks">
+  <nav class="navlinks" id="navlinks">
     <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
+
+    <!-- Resume Download Button -->
+    <a class="btn small" href="assets/resume/resume.pdf" download>
+      Download Resume
+    </a>
   </nav>
+
+  <!-- Hamburger Menu -->
+  <button class="hamburger" id="hamburger" aria-label="menu">
+    <span></span><span></span><span></span>
+  </button>
 </header>
+
 
 <main class="container">
 
 <!-- HERO -->
 <section class="hero">
 
-  <div class="hero-left">
-    <h1>
+  <div class="hero-left reveal">
+    <h1 class="title">
       Final-Year Computer Science Engineering Student
     </h1>
 
@@ -44,20 +57,37 @@
       Android development, and Python backend systems.
     </p>
 
-    <p>Bengaluru, India • Open for internships & entry-level roles</p>
-
     <div class="hero-cta">
       <a class="btn" href="#projects">View Projects</a>
-      <a class="btn ghost" href="#contact">Contact</a>
+      <a class="btn ghost" href="#contact">Contact Me</a>
+    </div>
+
+    <div class="quick-info">
+      <div class="card mini">
+        <h4>Location</h4>
+        <p>Bengaluru</p>
+      </div>
+      <div class="card mini">
+        <h4>Focus</h4>
+        <p>Cybersecurity & Development</p>
+      </div>
+      <div class="card mini">
+        <h4>Availability</h4>
+        <p>Internships / Entry-Level</p>
+      </div>
     </div>
   </div>
 
-  <div class="hero-right">
+  <div class="hero-right reveal">
     <div class="profile-card">
-      <img class="pfp" src="assets/img/profile.jpg" alt="Profile Photo">
+      <div class="pfp-wrap">
+        <img class="pfp" src="assets/img/profile.jpg" alt="Profile Photo"/>
+      </div>
 
-      <h2>Chandragiriprasad Moorman</h2>
-      <p class="muted">Cybersecurity Enthusiast • Android Developer • Python Developer</p>
+      <div class="profile-info">
+        <h2>Chandragiriprasad Moorman</h2>
+        <p class="muted">Cybersecurity Enthusiast • Android Developer • Python Developer</p>
+      </div>
 
       <div class="badges">
         <span class="badge">OWASP Top 10</span>
@@ -76,111 +106,137 @@
 
 </section>
 
+
 <!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About</h2>
+<section class="section reveal" id="about">
+  <div class="section-header">
+    <h2>About</h2>
+  </div>
 
-  <p>
-    I am a final-year Computer Science Engineering student at Cambridge Institute of Technology, Bengaluru.
-  </p>
+  <div class="card">
+    <p>
+      I am a final-year Computer Science Engineering student at Cambridge Institute of Technology, Bengaluru.
+    </p>
 
-  <p>
-    I have hands-on experience in cybersecurity testing, DDoS attack analysis, and web vulnerability assessment.
-    Currently, I am working as an Android App Development Intern where I contribute to application development
-    and explore Generative AI integrations.
-  </p>
+    <p>
+      I have hands-on experience in cybersecurity testing, DDoS attack analysis, and web vulnerability assessment.
+      Currently, I am working as an Android App Development Intern where I contribute to application development
+      and explore Generative AI integrations.
+    </p>
 
-  <p>
-    My interests include cybersecurity, backend development, and building secure and efficient applications.
-  </p>
+    <p>
+      My interests include cybersecurity, backend development, and building secure and efficient applications.
+    </p>
+  </div>
 </section>
 
 
 <!-- EDUCATION -->
-<section id="education" class="section">
-  <h2>Education</h2>
+<section class="section reveal" id="education">
+  <div class="section-header">
+    <h2>Education</h2>
+  </div>
 
-  <p><strong>B.E. Computer Science & Engineering</strong></p>
-  <p>Cambridge Institute of Technology, Bengaluru</p>
-  <p>Final Year (Expected 2026)</p>
+  <div class="card">
+    <h3>B.E. Computer Science & Engineering</h3>
+    <p class="muted">Cambridge Institute of Technology, Bengaluru</p>
+    <p>Final Year — Expected 2026</p>
+  </div>
 </section>
 
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section">
-  <h2>Experience</h2>
+<section class="section reveal" id="experience">
+  <div class="section-header">
+    <h2>Experience</h2>
+  </div>
 
-  <h3>Android App Development Intern – Mindmatrix</h3>
-  <p>Jan 2026 – Present</p>
-
-  <ul>
-    <li>Contributing to Android app development using Java/Kotlin</li>
-    <li>Assisted in UI components and application logic</li>
-    <li>Worked with Generative AI tools and API integrations</li>
-    <li>Gained experience in debugging, testing, and app architecture</li>
-  </ul>
+  <div class="card">
+    <h3>Android App Development Intern — Mindmatrix</h3>
+    <p class="muted">Jan 2026 – Present</p>
+    <ul>
+      <li>Contributing to Android app development using Java/Kotlin</li>
+      <li>Assisted in implementing UI components and application logic</li>
+      <li>Worked with Generative AI tools and API integrations</li>
+      <li>Gained experience in debugging, testing, and app architecture</li>
+    </ul>
+  </div>
 </section>
 
 
 <!-- SKILLS -->
-<section id="skills" class="section">
-  <h2>Technical Skills</h2>
+<section class="section reveal" id="skills">
+  <div class="section-header">
+    <h2>Skills</h2>
+  </div>
 
-  <h3>Cybersecurity</h3>
-  <p>Nmap, Burp Suite, Wireshark, OWASP Top 10, Web Security Testing</p>
+  <div class="card">
+    <h3>Cybersecurity</h3>
+    <p>Nmap • Burp Suite • Wireshark • OWASP Top 10 • Web Security Testing</p>
 
-  <h3>Programming</h3>
-  <p>Python, C, C++, JavaScript, SQL (Basics)</p>
+    <h3>Programming</h3>
+    <p>Python • C • C++ • JavaScript • SQL (Basics)</p>
 
-  <h3>Android Development</h3>
-  <p>Android Studio, Java/Kotlin, UI Layouts, Activity Lifecycle</p>
+    <h3>Android Development</h3>
+    <p>Android Studio • Java/Kotlin • UI Layouts • Activity Lifecycle</p>
 
-  <h3>Backend & Web</h3>
-  <p>Flask (Basics), REST APIs, Node.js & Express (Basics), MongoDB (Basics), MySQL</p>
+    <h3>Backend & Web</h3>
+    <p>Flask • REST APIs • Node.js • Express • MongoDB • MySQL</p>
 
-  <h3>Tools</h3>
-  <p>Git, GitHub, Linux (Kali, Ubuntu), VS Code</p>
+    <h3>Tools</h3>
+    <p>Git • GitHub • Linux (Kali, Ubuntu) • VS Code</p>
+  </div>
 </section>
 
 
 <!-- PROJECTS -->
-<section id="projects" class="section">
-  <h2>Projects</h2>
+<section class="section reveal" id="projects">
+  <div class="section-header">
+    <h2>Projects</h2>
+  </div>
 
-  <h3>DDoS Attack Detection & Prevention</h3>
-  <ul>
-    <li>Built Python logic to detect abnormal traffic patterns</li>
-    <li>Studied prevention techniques like rate limiting and filtering</li>
-  </ul>
+  <div class="card">
+    <h3>DDoS Attack Detection & Prevention</h3>
+    <ul>
+      <li>Built Python logic to detect abnormal traffic patterns</li>
+      <li>Studied prevention techniques like rate limiting and filtering</li>
+    </ul>
 
-  <h3>Web Application Vulnerability Testing</h3>
-  <ul>
-    <li>Tested applications for SQL Injection and XSS</li>
-    <li>Mapped vulnerabilities to OWASP Top 10</li>
-  </ul>
+    <h3>Web Application Vulnerability Testing</h3>
+    <ul>
+      <li>Tested applications for SQL Injection and XSS</li>
+      <li>Mapped vulnerabilities to OWASP Top 10</li>
+    </ul>
 
-  <h3>Student Management System</h3>
-  <ul>
-    <li>Developed Python & MySQL CRUD system</li>
-    <li>Implemented database connectivity and data handling</li>
-  </ul>
+    <h3>Student Management System</h3>
+    <ul>
+      <li>Developed Python & MySQL CRUD system</li>
+      <li>Implemented database connectivity and data handling</li>
+    </ul>
+  </div>
 </section>
 
 
 <!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Contact</h2>
+<section class="section reveal" id="contact">
+  <div class="section-header">
+    <h2>Contact</h2>
+  </div>
 
-  <p>Email: chandumoorman@gmail.com</p>
-  <p>Phone: +91 6363324704</p>
-  <p>GitHub: github.com/chandumoorman</p>
-  <p>LinkedIn: linkedin.com/in/chandragiriprasad-moorman</p>
+  <div class="card">
+    <p>📧 chandumoorman@gmail.com</p>
+    <p>📞 +91 6363324704</p>
+    <p>💻 github.com/chandumoorman</p>
+    <p>🔗 linkedin.com/in/chandragiriprasad-moorman</p>
+  </div>
 </section>
 
-<footer>
+<footer class="footer">
   <p>© 2026 Chandragiriprasad Moorman</p>
 </footer>
 
 </main>
+
+<script src="script.js"></script>
 </body>
 </html>
