@@ -74,24 +74,26 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
       loader.remove();
-    }, 500);
+    }, 300);
   }
 });
 
 
 /* =========================
-   MATRIX RAIN (OPTIMIZED)
+   MATRIX RAIN (DESKTOP ONLY)
+   prevents mobile reload
 ========================= */
-
 const canvas = document.getElementById("matrix");
 
-if (canvas && window.innerWidth > 768) {  // disable on small phones for stability
+// disable on phones & small devices
+if (canvas && window.innerWidth > 1024) {
+
   const ctx = canvas.getContext("2d");
 
   let columns;
   let drops;
   const fontSize = 16;
-  const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&@";
+  const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   function resize() {
     canvas.width = window.innerWidth;
@@ -104,17 +106,17 @@ if (canvas && window.innerWidth > 768) {  // disable on small phones for stabili
   window.addEventListener("resize", resize);
 
   function draw() {
-    ctx.fillStyle = "rgba(255,255,255,0.05)";
+    ctx.fillStyle = "rgba(255,255,255,0.12)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "rgba(14,165,233,0.35)";
+    ctx.fillStyle = "rgba(14,165,233,0.25)";
     ctx.font = fontSize + "px monospace";
 
     for (let i = 0; i < drops.length; i++) {
       const text = letters[Math.floor(Math.random() * letters.length)];
       ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+      if (drops[i] * fontSize > canvas.height) {
         drops[i] = 0;
       }
       drops[i]++;
