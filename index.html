@@ -3,318 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chandragiriprasad Moorman | Cybersecurity Portfolio</title>
+  <title>Chandragiriprasad Moorman | Portfolio</title>
 
-  <meta name="description" content="Cybersecurity Specialist | Ethical Hacker | Penetration Tester | Portfolio" />
+  <meta name="description" content="Cybersecurity & Software Development Portfolio" />
   <meta name="theme-color" content="#030712" />
-
-  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Background -->
-  <div class="bg-layer">
-    <div class="bg-image"></div>
-    <div class="bg-overlay"></div>
-    <div class="bg-grid"></div>
-    <canvas id="matrix"></canvas>
+
+<header class="navbar">
+  <div class="brand">
+    <span class="logo">CM</span>
+    <span class="brand-text">Chandragiriprasad Moorman</span>
   </div>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="brand">
-      <span class="logo">CM</span>
-      <span class="brand-text">Chandragiriprasad Moorman</span>
-    </div>
+  <nav class="navlinks">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <nav class="navlinks" id="navlinks">
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a class="btn small" href="assets/resume/resume.pdf" download>Download Resume</a>
-    </nav>
+<main class="container">
 
-    <button class="hamburger" id="hamburger" aria-label="menu">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
+<!-- HERO -->
+<section class="hero">
+  <h1>
+    Final-Year Computer Science Engineering Student
+  </h1>
 
-  <!-- Hero -->
-  <main class="container">
-    <section class="hero">
-      <div class="hero-left reveal">
-        <div class="status-pill">
-          <span class="dot"></span>
-          <span>TryHackMe: Top 10% India</span>
-        </div>
+  <p class="subtitle">
+    Cybersecurity & Software Development Enthusiast specializing in vulnerability analysis,
+    Android development, and Python backend systems.
+  </p>
 
-        <h1 class="title">
-          Cybersecurity Specialist
-          <span class="gradient-text">Ethical Hacker</span>
-        </h1>
+  <p>Bengaluru, India • Open for internships & entry-level roles</p>
+</section>
 
-        <p class="subtitle">
-          I do penetration testing, vulnerability assessments, and build security automation tools.
-          I love breaking systems (ethically) and making them stronger.
-        </p>
 
-        <div class="hero-cta">
-          <a class="btn" href="#projects">View Projects</a>
-          <a class="btn ghost" href="#contact">Contact Me</a>
-        </div>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Me</h2>
 
-        <div class="quick-info">
-          <div class="card mini">
-            <h4>Location</h4>
-            <p>Bengaluru, Karnataka</p>
-          </div>
-          <div class="card mini">
-            <h4>Focus</h4>
-            <p>Web + Network Security</p>
-          </div>
-          <div class="card mini">
-            <h4>Availability</h4>
-            <p>Immediate (Internship/Entry)</p>
-          </div>
-        </div>
-      </div>
+  <p>
+    I am a final-year Computer Science Engineering student at Cambridge Institute of Technology, Bengaluru.
+  </p>
 
-      <div class="hero-right reveal">
-        <div class="profile-card">
-          <div class="pfp-wrap">
-            <img class="pfp" src="assets/img/profile.jpg" alt="Profile Photo" />
-          </div>
+  <p>
+    I have hands-on experience in cybersecurity testing, DDoS attack analysis, and web vulnerability assessment.
+    Currently, I am working as an Android App Development Intern where I contribute to application development
+    and explore Generative AI integrations.
+  </p>
 
-          <div class="profile-info">
-            <h2>Chandragiriprasad Moorman</h2>
-            <p class="muted">Penetration Tester • Security Researcher</p>
-          </div>
+  <p>
+    My interests include cybersecurity, backend development, and building secure and efficient applications.
+  </p>
+</section>
 
-          <div class="badges">
-            <span class="badge">OWASP Top 10</span>
-            <span class="badge">Burp Suite</span>
-            <span class="badge">Nmap</span>
-            <span class="badge">CTF Winner</span>
-          </div>
 
-          <div class="socials">
-            <a href="https://linkedin.com/in/chandragiriprasad-moorman" target="_blank">LinkedIn</a>
-            <a href="https://github.com/chandumoorman" target="_blank">GitHub</a>
-            <a href="mailto:chandumoorman@gmail.com">Email</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- EDUCATION -->
+<section id="education" class="section">
+  <h2>Education</h2>
 
-    <!-- ABOUT -->
-    <section class="section reveal" id="about">
-      <div class="section-header">
-        <h2>About</h2>
-        <p class="muted">Professional summary from my resume</p>
-      </div>
+  <p><strong>B.E. Computer Science & Engineering</strong></p>
+  <p>Cambridge Institute of Technology, Bengaluru</p>
+  <p>Final Year (Expected 2026)</p>
+</section>
 
-      <div class="card">
-        <p>
-          Results-driven cybersecurity specialist with proven expertise in penetration testing and vulnerability assessment.
-          Achieved <b>Top 10% ranking</b> on TryHackMe India Leaderboard by completing 20+ advanced labs.
-          Built security automation tools that improved scanning efficiency by <b>40%</b>, executed phishing simulations impacting
-          150+ users, and secured <b>1st place</b> in a competitive college CTF.
-        </p>
 
-        <div class="stats">
-          <div class="stat">
-            <span class="stat-num">20+</span>
-            <span class="stat-label">Security Labs</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">40%</span>
-            <span class="stat-label">Scan Efficiency Boost</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">1st</span>
-            <span class="stat-label">CTF Champion</span>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <h2>Experience</h2>
 
-    <!-- EDUCATION -->
-    <section class="section reveal" id="education">
-      <div class="section-header">
-        <h2>Education</h2>
-        <p class="muted">Academic background</p>
-      </div>
+  <h3>Android App Development Intern – Mindmatrix</h3>
+  <p>Jan 2026 – Present</p>
 
-      <div class="card timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>B.E. Computer Science & Engineering</h3>
-            <p class="muted">
-              Cambridge Institute of Technology, Bengaluru • Expected May 2026 • 7th Semester
-            </p>
-            <p>
-              Relevant Coursework: Network Security, Cryptography, Operating Systems, DSA, DBMS,
-              Computer Networks, Web Technologies, Cloud Computing.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <ul>
+    <li>Contributing to Android app development using Java/Kotlin</li>
+    <li>Assisted in implementing UI components and application logic</li>
+    <li>Worked with Generative AI tools and API integrations</li>
+    <li>Gained experience in debugging, testing, and app architecture</li>
+  </ul>
+</section>
 
-    <!-- SKILLS -->
-    <section class="section reveal" id="skills">
-      <div class="section-header">
-        <h2>Skills</h2>
-        <p class="muted">Tools, programming, domains</p>
-      </div>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>Security Tools</h3>
-          <div class="chips">
-            <span class="chip">Nmap</span>
-            <span class="chip">Burp Suite Pro</span>
-            <span class="chip">Metasploit</span>
-            <span class="chip">Wireshark</span>
-            <span class="chip">Nikto</span>
-            <span class="chip">Hydra</span>
-            <span class="chip">John the Ripper</span>
-            <span class="chip">Gobuster</span>
-            <span class="chip">Hashcat</span>
-            <span class="chip">SQLMap</span>
-            <span class="chip">Aircrack-ng</span>
-            <span class="chip">Netcat</span>
-            <span class="chip">OWASP ZAP</span>
-            <span class="chip">Dirbuster</span>
-          </div>
-        </div>
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2>Technical Skills</h2>
 
-        <div class="card">
-          <h3>Programming & Platforms</h3>
-          <div class="chips">
-            <span class="chip">Python</span>
-            <span class="chip">Bash</span>
-            <span class="chip">PowerShell</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">HTML/CSS</span>
-            <span class="chip">SQL</span>
-            <span class="chip">PHP</span>
-            <span class="chip">C/C++</span>
-            <span class="chip">Kali Linux</span>
-            <span class="chip">Docker</span>
-            <span class="chip">Kubernetes</span>
-            <span class="chip">VirtualBox</span>
-            <span class="chip">AWS EC2</span>
-            <span class="chip">Git/GitHub</span>
-          </div>
-        </div>
+  <h3>Cybersecurity</h3>
+  <p>Nmap, Burp Suite, Wireshark, OWASP Top 10, Web Security Testing</p>
 
-        <div class="card">
-          <h3>Security Domains</h3>
-          <div class="chips">
-            <span class="chip">OWASP Top 10</span>
-            <span class="chip">Web App Security</span>
-            <span class="chip">Network Pentesting</span>
-            <span class="chip">OSINT</span>
-            <span class="chip">Social Engineering</span>
-            <span class="chip">Threat Modeling</span>
-            <span class="chip">Incident Response</span>
-            <span class="chip">Digital Forensics</span>
-          </div>
-        </div>
+  <h3>Programming</h3>
+  <p>Python, C, C++, JavaScript, SQL (Basics)</p>
 
-        <div class="card">
-          <h3>Networking</h3>
-          <div class="chips">
-            <span class="chip">TCP/IP</span>
-            <span class="chip">DNS</span>
-            <span class="chip">HTTP/HTTPS</span>
-            <span class="chip">SSL/TLS</span>
-            <span class="chip">VPN</span>
-            <span class="chip">Firewalls</span>
-            <span class="chip">IDS/IPS</span>
-            <span class="chip">WPA2/WPA3</span>
-            <span class="chip">Subnetting</span>
-            <span class="chip">Routing Protocols</span>
-          </div>
-        </div>
-      </div>
-    </section>
+  <h3>Android Development</h3>
+  <p>Android Studio, Java/Kotlin, UI Layouts, Activity Lifecycle</p>
 
-    <!-- PROJECTS -->
-    <section class="section reveal" id="projects">
-      <div class="section-header">
-        <h2>Projects</h2>
-        <p class="muted">Loaded from projects.json (easy to update)</p>
-      </div>
+  <h3>Backend & Web</h3>
+  <p>Flask (Basics), REST APIs, Node.js & Express (Basics), MongoDB (Basics), MySQL</p>
 
-      <div id="projects-grid" class="grid-2"></div>
+  <h3>Tools</h3>
+  <p>Git, GitHub, Linux (Kali, Ubuntu), VS Code</p>
+</section>
 
-      <div class="card callout">
-        <h3>Easy Update Tip ✅</h3>
-        <p class="muted">
-          You can update projects anytime by editing <b>projects.json</b>. No need to touch HTML.
-        </p>
-      </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section class="section reveal" id="contact">
-      <div class="section-header">
-        <h2>Contact</h2>
-        <p class="muted">Let’s connect</p>
-      </div>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>Get in touch</h3>
-          <p class="muted">Email is the best way to reach me.</p>
+  <h3>DDoS Attack Detection & Prevention</h3>
+  <ul>
+    <li>Built Python logic to detect abnormal traffic patterns</li>
+    <li>Studied prevention techniques like rate limiting and filtering</li>
+  </ul>
 
-          <div class="contact-links">
-            <a class="contact" href="mailto:chandumoorman@gmail.com">
-              📩 chandumoorman@gmail.com
-            </a>
-            <a class="contact" href="https://github.com/chandumoorman" target="_blank">
-              💻 github.com/chandumoorman
-            </a>
-            <a class="contact" href="https://linkedin.com/in/chandragiriprasad-moorman" target="_blank">
-              🔗 linkedin.com/in/chandragiriprasad-moorman
-            </a>
-          </div>
-        </div>
+  <h3>Web Application Vulnerability Testing</h3>
+  <ul>
+    <li>Tested applications for SQL Injection and XSS</li>
+    <li>Mapped vulnerabilities to OWASP Top 10</li>
+  </ul>
 
-        <div class="card">
-          <h3>Resume</h3>
-          <p class="muted">Download my resume (PDF) directly:</p>
-          <a class="btn" href="assets/resume/resume.pdf" download>Download Resume</a>
+  <h3>Student Management System</h3>
+  <ul>
+    <li>Developed Python & MySQL CRUD system</li>
+    <li>Implemented database connectivity and data handling</li>
+  </ul>
+</section>
 
-          <div class="divider"></div>
 
-          <h3>Achievements</h3>
-          <ul class="list">
-            <li>🏆 1st Place — College CTF Competition (April 2025)</li>
-            <li>🎯 TryHackMe — Top 10% India</li>
-            <li>🧪 Built scanning automation tools</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> Chandragiriprasad Moorman • Built on Termux • Hosted on GitHub Pages</p>
-    </footer>
-  </main>
+  <p>Email: chandumoorman@gmail.com</p>
+  <p>Phone: +91 6363324704</p>
+  <p>GitHub: github.com/chandumoorman</p>
+  <p>LinkedIn: linkedin.com/in/chandragiriprasad-moorman</p>
+</section>
 
-  <script src="script.js"></script>
+<footer>
+  <p>© 2026 Chandragiriprasad Moorman</p>
+</footer>
+
+</main>
 </body>
-</html>
+    </html>
