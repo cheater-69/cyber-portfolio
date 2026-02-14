@@ -1,29 +1,76 @@
-// Navbar mobile
+/* =========================
+   MOBILE NAV MENU
+========================= */
 const hamburger = document.getElementById("hamburger");
 const navlinks = document.getElementById("navlinks");
-hamburger.addEventListener("click", () => {
-  navlinks.classList.toggle("open");
-});
 
-// Year
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Reveal on scroll
-const reveals = document.querySelectorAll(".reveal");
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((e) => {
-    if (e.isIntersecting) e.target.classList.add("show");
+if (hamburger && navlinks) {
+  hamburger.addEventListener("click", () => {
+    navlinks.classList.toggle("open");
   });
-}, { threshold: 0.15 });
 
-reveals.forEach((el) => io.observe(el));
+  // close menu after click (mobile)
+  document.querySelectorAll(".navlinks a").forEach(link => {
+    link.addEventListener("click", () => {
+      navlinks.classList.remove("open");
+    });
+  });
+}
 
-// Load projects from JSON
-async function loadProjects(){
-  try{
+
+/* =========================
+   AUTO YEAR
+========================= */
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
+
+
+/* =========================
+   REVEAL ANIMATION (SAFE)
+========================= */
+const reveals = document.querySelectorAll(".reveal");
+
+function revealFallback() {
+  const windowHeight = window.innerHeight;
+
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < windowHeight - 80) {
+      el.classList.add("show");
+    }
+  });
+}
+
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  reveals.forEach(el => io.observe(el));
+} else {
+  // fallback for older/mobile browsers
+  window.addEventListener("scroll", revealFallback);
+  revealFallback();
+}
+
+
+/* =========================
+   LOAD PROJECTS FROM JSON
+========================= */
+async function loadProjects() {
+  const grid = document.getElementById("projects-grid");
+  if (!grid) return;
+
+  try {
     const res = await fetch("projects.json");
     const data = await res.json();
-    const grid = document.getElementById("projects-grid");
+
     grid.innerHTML = "";
 
     data.projects.forEach(p => {
@@ -31,7 +78,6 @@ async function loadProjects(){
       el.className = "card project";
 
       const tags = p.stack.map(t => `<span class="tag">${t}</span>`).join("");
-
       const items = p.highlights.map(h => `<li>${h}</li>`).join("");
 
       el.innerHTML = `
@@ -40,46 +86,57 @@ async function loadProjects(){
         <div class="tags">${tags}</div>
         <ul>${items}</ul>
       `;
+
       grid.appendChild(el);
     });
-  } catch(err){
+
+  } catch (err) {
     console.log("projects.json load error:", err);
   }
 }
 loadProjects();
 
-// MATRIX EFFECT
+
+/* =========================
+   MATRIX RAIN EFFECT
+========================= */
 const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
 
-function resize(){
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resize();
-window.addEventListener("resize", resize);
+if (canvas) {
+  const ctx = canvas.getContext("2d");
 
-const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&@";
-const fontSize = 16;
-let columns = Math.floor(canvas.width / fontSize);
-let drops = Array(columns).fill(1);
-
-function draw(){
-  ctx.fillStyle = "rgba(2, 6, 23, 0.06)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  ctx.font = `${fontSize}px JetBrains Mono`;
-  ctx.fillStyle = "rgba(0, 255, 213, 0.35)";
-
-  for(let i=0; i<drops.length; i++){
-    const text = letters[Math.floor(Math.random() * letters.length)];
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-    if(drops[i] * fontSize > canvas.height && Math.random() > 0.975){
-      drops[i] = 0;
-    }
-    drops[i]++;
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    columns = Math.floor(canvas.width / fontSize);
+    drops = Array(columns).fill(1);
   }
-}
 
-setInterval(draw, 40);
+  const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&@";
+  const fontSize = 16;
+  let columns = Math.floor(window.innerWidth / fontSize);
+  let drops = Array(columns).fill(1);
+
+  window.addEventListener("resize", resize);
+  resize();
+
+  function draw() {
+    ctx.fillStyle = "rgba(2, 6, 23, 0.06)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = `${fontSize}px JetBrains Mono`;
+    ctx.fillStyle = "rgba(0, 255, 213, 0.35)";
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = letters[Math.floor(Math.random() * letters.length)];
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  setInterval(draw, 40);
+          }
