@@ -7,21 +7,13 @@
 
 <link rel="stylesheet" href="style.css">
 
-<!-- PREMIUM FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="spinner"></div>
-</div>
-
-<!-- SCROLL PROGRESS -->
 <div id="progress-bar"></div>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="brand">
     <span class="logo">CM</span>
@@ -31,122 +23,77 @@
   <nav class="navlinks" id="navlinks">
     <a href="#about">About</a>
     <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-    <a class="btn small" href="assets/resume/resume.pdf" download>Resume</a>
   </nav>
 
-  <button class="hamburger" id="hamburger">☰</button>
+  <button id="hamburger" class="hamburger">☰</button>
 </header>
 
 <main class="container">
 
-<!-- HERO -->
 <section class="hero reveal">
-
   <div>
-    <div class="status-pill">
-      <span class="dot"></span>
-      Cybersecurity & AI Development
-    </div>
-
     <h1 class="title">
       Building Secure Systems<br>
-      <span class="gradient-text">with Intelligence & Automation</span>
+      <span class="gradient-text">with Intelligence</span>
     </h1>
 
     <p class="subtitle">
-      Final-year Computer Science Engineering student specializing in cybersecurity,
-      Android development, and intelligent backend systems.
+      Cybersecurity enthusiast focused on building secure and intelligent systems.
     </p>
-
-    <div class="hero-cta">
-      <a class="btn" href="#projects">View Projects</a>
-      <a class="btn ghost" href="#contact">Contact</a>
-    </div>
   </div>
 
   <div class="profile-card">
     <div class="pfp-wrap">
       <img src="assets/img/profile.jpg" class="pfp">
     </div>
-
     <h2>Chandragiriprasad Moorman</h2>
-    <p class="muted">Cybersecurity • Android • Python • AI Tools</p>
-    <p class="muted">OWASP Top 10 • Burp Suite • Nmap • GenAI APIs</p>
+    <p class="muted">Cybersecurity • Android • Python</p>
   </div>
-
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section reveal">
   <div class="card">
     <h2>About</h2>
-    <p>I am a final-year Computer Science Engineering student at Cambridge Institute of Technology, Bengaluru.</p>
-    <p>My experience includes cybersecurity testing, DDoS analysis, vulnerability assessment, and Android development.</p>
+    <p>Final-year CSE student specializing in cybersecurity and secure systems.</p>
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section id="education" class="section reveal">
   <div class="card">
     <h2>Education</h2>
-    <h3>B.E. Computer Science & Engineering</h3>
-    <p class="muted">Cambridge Institute of Technology</p>
-    <p>Expected Graduation: 2026</p>
+    <p>B.E. Computer Science & Engineering</p>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="section reveal">
-  <div class="card">
-    <h2>Experience</h2>
-    <h3>Android App Development Intern — Mindmatrix</h3>
-    <ul>
-      <li>Android development using Java/Kotlin</li>
-      <li>Integrated Generative AI APIs</li>
-      <li>Testing & debugging</li>
-    </ul>
-  </div>
-</section>
-
-<!-- SKILLS -->
 <section id="skills" class="section reveal">
   <div class="card">
     <h2>Skills</h2>
-    <span class="skill-chip">Python</span>
-    <span class="skill-chip">Burp Suite</span>
-    <span class="skill-chip">Nmap</span>
-    <span class="skill-chip">Wireshark</span>
-    <span class="skill-chip">Linux</span>
-    <span class="skill-chip">Android</span>
+    <span class="chip">Python</span>
+    <span class="chip">Burp Suite</span>
+    <span class="chip">Nmap</span>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="section reveal">
   <div class="card">
     <h2>Projects</h2>
-    <p>DDoS Detection & Prevention</p>
+    <p>DDoS Detection</p>
     <p>Web Vulnerability Testing</p>
-    <p>Student Management System</p>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section reveal">
   <div class="card">
     <h2>Contact</h2>
-    <p>📧 chandumoorman@gmail.com</p>
-    <p>💻 github.com/chandumoorman</p>
-    <p>🔗 linkedin.com/in/chandragiriprasad-moorman</p>
+    <p>Email: chandumoorman@gmail.com</p>
   </div>
 </section>
 
 <footer class="footer">
-  © <span id="year"></span> Chandragiriprasad Moorman
+© <span id="year"></span>
 </footer>
 
 </main>
