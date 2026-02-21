@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber Portfolio | Chandragiriprasad</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chandragiriprasad Moorman | Cyber Portfolio</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
 
+<!-- SCROLL PROGRESS BAR -->
+<div id="scrollProgress"></div>
+
+<!-- BACKGROUND LAYERS -->
+<div class="bg-layer">
+  <div class="bg-image"></div>
+  <div class="bg-overlay"></div>
+  <canvas id="matrix"></canvas>
+</div>
+
+<!-- NAVBAR -->
 <header class="navbar">
-  <div class="logo">CM</div>
+  <div class="brand">
+    <span class="logo">CM</span>
+    <span class="brand-text">Chandragiriprasad</span>
+  </div>
 
   <nav class="navlinks" id="navlinks">
     <a href="#about">About</a>
@@ -26,93 +40,7 @@
     <a class="btn small" href="assets/resume/resume.pdf" download>Resume</a>
   </nav>
 
-  <div class="hamburger" id="hamburger">☰</div>
-</header>
-
-<main class="container">
-
-<section class="hero reveal">
-  <div>
-    <h1>
-      Building Secure Systems<br>
-      <span class="gradient">with Intelligence</span>
-    </h1>
-
-    <p>
-      Cybersecurity enthusiast & Android developer focused on building
-      secure, scalable and intelligent systems.
-    </p>
-
-    <div class="hero-btns">
-      <a class="btn" href="#projects">View Projects</a>
-      <a class="btn outline" href="#contact">Contact</a>
-    </div>
-  </div>
-
-  <div class="card center">
-    <img src="assets/img/profile.jpg" class="profile">
-    <h3>Chandragiriprasad</h3>
-    <p class="muted">Cybersecurity • Android • AI</p>
-  </div>
-</section>
-
-<section id="about" class="section reveal">
-  <div class="card">
-    <h2>About</h2>
-    <p>Final-year CSE student specializing in cybersecurity and secure application development.</p>
-  </div>
-</section>
-
-<section id="education" class="section reveal">
-  <div class="card">
-    <h2>Education</h2>
-    <p>B.E. Computer Science — Cambridge Institute of Technology</p>
-  </div>
-</section>
-
-<section id="experience" class="section reveal">
-  <div class="card">
-    <h2>Experience</h2>
-    <p>Android Development Intern — Mindmatrix</p>
-  </div>
-</section>
-
-<section id="skills" class="section reveal">
-  <div class="card">
-    <h2>Skills</h2>
-    <p><b>Cybersecurity:</b> Nmap, Burp Suite, Wireshark</p>
-    <p><b>Programming:</b> Python, JavaScript</p>
-    <p><b>Tools:</b> Linux, Git, Android Studio</p>
-  </div>
-</section>
-
-<section id="projects" class="section reveal">
-  <div class="card">
-    <h2>Projects</h2>
-    <p>DDoS Detection System</p>
-    <p>Web Vulnerability Testing</p>
-    <p>Student Management System</p>
-  </div>
-</section>
-
-<section id="contact" class="section reveal">
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Email: chandumoorman@gmail.com</p>
-    <p>GitHub: github.com/chandumoorman</p>
-  </div>
-</section>
-
-<footer class="footer">
-  © <span id="year"></span> Chandragiriprasad
-</footer>
-
-</main>
-
-<script src="script.js"></script>
-</body>
-</html>
-  <button class="hamburger" id="hamburger">
+  <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </header>
@@ -129,13 +57,12 @@
 
     <h1 class="title">
       Building Secure Systems<br>
-      <span class="gradient-text">with Intelligence & Automation</span>
+      <span class="gradient-text typing"></span>
     </h1>
 
     <p class="subtitle">
       Final-year Computer Science Engineering student specializing in cybersecurity,
-      Android development, and intelligent backend systems. Passionate about discovering
-      vulnerabilities and building secure, scalable solutions.
+      Android development, and intelligent backend systems.
     </p>
 
     <div class="hero-cta">
@@ -143,21 +70,21 @@
       <a class="btn ghost" href="#contact">Contact</a>
     </div>
   </div>
-<div class="profile-card">
 
-  <div class="pfp-wrap">
-    <img class="pfp" src="assets/img/profile.jpg" alt="profile">
-  </div>
+  <!-- PROFILE CARD -->
+  <div class="profile-card">
+    <div class="pfp-wrap">
+      <img class="pfp" src="assets/img/profile.jpg" alt="Profile Photo">
+    </div>
 
-  <div class="profile-info">
-    <h2>Chandragiriprasad Moorman</h2>
-    <p>Cybersecurity • Android • Python • AI Tools</p>
-  </div>
+    <div class="profile-info">
+      <h2>Chandragiriprasad</h2>
+      <p>Cybersecurity • Android • Python • AI</p>
+    </div>
 
-  <div class="profile-divider"></div>
+    <div class="profile-divider"></div>
 
-  <div class="badges">
-  
+    <div class="badges">
       <span class="badge">OWASP Top 10</span>
       <span class="badge">Burp Suite</span>
       <span class="badge">Nmap</span>
@@ -170,18 +97,7 @@
 <section id="about" class="section reveal">
   <div class="card">
     <h2>About</h2>
-    <p>
-      I am a final-year Computer Science Engineering student at Cambridge Institute
-      of Technology, Bengaluru.
-    </p>
-    <p>
-      My experience includes cybersecurity testing, DDoS traffic analysis,
-      web vulnerability assessment, and Android application development.
-    </p>
-    <p>
-      I enjoy building secure applications, automating workflows, and integrating
-      modern AI tools into practical solutions.
-    </p>
+    <p>I am passionate about cybersecurity and secure software development.</p>
   </div>
 </section>
 
@@ -189,9 +105,9 @@
 <section id="education" class="section reveal">
   <div class="card">
     <h2>Education</h2>
-    <h3>B.E. Computer Science & Engineering</h3>
-    <p class="muted">Cambridge Institute of Technology, Bengaluru</p>
-    <p>Expected Graduation: 2026</p>
+    <p><b>B.E. Computer Science & Engineering</b></p>
+    <p>Cambridge Institute of Technology</p>
+    <p class="muted">Expected Graduation: 2026</p>
   </div>
 </section>
 
@@ -199,25 +115,15 @@
 <section id="experience" class="section reveal">
   <div class="card">
     <h2>Experience</h2>
-    <h3>Android App Development Intern — Mindmatrix</h3>
-    <p class="muted">Jan 2026 – Present</p>
-    <ul>
-      <li>Developing Android applications using Java/Kotlin</li>
-      <li>Implemented UI components and application logic</li>
-      <li>Integrated Generative AI APIs into app features</li>
-      <li>Debugging, testing, and improving performance</li>
-    </ul>
+    <p><b>Android Developer Intern</b> — Mindmatrix</p>
   </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="section reveal">
   <div class="card">
-    <h2>Technical Skills</h2>
-    <p><b>Cybersecurity:</b> Nmap, Burp Suite, Wireshark, OWASP Top 10</p>
-    <p><b>Programming:</b> Python, C, C++, JavaScript</p>
-    <p><b>Development:</b> Android Studio, Flask, REST APIs</p>
-    <p><b>Tools:</b> Linux, Git, GitHub, VS Code</p>
+    <h2>Skills</h2>
+    <p>Cybersecurity • Python • Android • Linux • REST APIs</p>
   </div>
 </section>
 
@@ -225,10 +131,7 @@
 <section id="projects" class="section reveal">
   <div class="card">
     <h2>Projects</h2>
-
-    <p><b>DDoS Detection & Prevention System</b></p>
-    <p><b>Web Application Vulnerability Testing</b></p>
-    <p><b>Student Management System (Python & MySQL)</b></p>
+    <p>DDoS Detection • Vulnerability Testing • Student Management System</p>
   </div>
 </section>
 
@@ -237,17 +140,18 @@
   <div class="card">
     <h2>Contact</h2>
     <p>📧 chandumoorman@gmail.com</p>
-    <p>💻 github.com/chandumoorman</p>
-    <p>🔗 linkedin.com/in/chandragiriprasad-moorman</p>
+    <p>💻 <a href="https://github.com/chandumoorman" target="_blank">github.com/chandumoorman</a></p>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   © <span id="year"></span> Chandragiriprasad Moorman
 </footer>
 
 </main>
 
-<script src="script.js"></script>
+<!-- JS -->
+<script src="./script.js"></script>
 </body>
-</html>
+      </html>
