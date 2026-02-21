@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chandragiriprasad Moorman | Cyber Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Portfolio | Chandragiriprasad</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- BACKGROUND -->
-<div class="bg-layer">
-  <div class="bg-image"></div>
-  <div class="bg-overlay"></div>
-  <div class="bg-grid"></div>
-  <canvas id="matrix"></canvas>
-</div>
-
-<!-- NAVBAR -->
 <header class="navbar">
-  <div class="brand">
-    <span class="logo">CM</span>
-    <span class="brand-text">Chandragiriprasad Moorman</span>
-  </div>
+  <div class="logo">CM</div>
 
   <nav class="navlinks" id="navlinks">
     <a href="#about">About</a>
@@ -35,6 +26,92 @@
     <a class="btn small" href="assets/resume/resume.pdf" download>Resume</a>
   </nav>
 
+  <div class="hamburger" id="hamburger">☰</div>
+</header>
+
+<main class="container">
+
+<section class="hero reveal">
+  <div>
+    <h1>
+      Building Secure Systems<br>
+      <span class="gradient">with Intelligence</span>
+    </h1>
+
+    <p>
+      Cybersecurity enthusiast & Android developer focused on building
+      secure, scalable and intelligent systems.
+    </p>
+
+    <div class="hero-btns">
+      <a class="btn" href="#projects">View Projects</a>
+      <a class="btn outline" href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="card center">
+    <img src="assets/img/profile.jpg" class="profile">
+    <h3>Chandragiriprasad</h3>
+    <p class="muted">Cybersecurity • Android • AI</p>
+  </div>
+</section>
+
+<section id="about" class="section reveal">
+  <div class="card">
+    <h2>About</h2>
+    <p>Final-year CSE student specializing in cybersecurity and secure application development.</p>
+  </div>
+</section>
+
+<section id="education" class="section reveal">
+  <div class="card">
+    <h2>Education</h2>
+    <p>B.E. Computer Science — Cambridge Institute of Technology</p>
+  </div>
+</section>
+
+<section id="experience" class="section reveal">
+  <div class="card">
+    <h2>Experience</h2>
+    <p>Android Development Intern — Mindmatrix</p>
+  </div>
+</section>
+
+<section id="skills" class="section reveal">
+  <div class="card">
+    <h2>Skills</h2>
+    <p><b>Cybersecurity:</b> Nmap, Burp Suite, Wireshark</p>
+    <p><b>Programming:</b> Python, JavaScript</p>
+    <p><b>Tools:</b> Linux, Git, Android Studio</p>
+  </div>
+</section>
+
+<section id="projects" class="section reveal">
+  <div class="card">
+    <h2>Projects</h2>
+    <p>DDoS Detection System</p>
+    <p>Web Vulnerability Testing</p>
+    <p>Student Management System</p>
+  </div>
+</section>
+
+<section id="contact" class="section reveal">
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Email: chandumoorman@gmail.com</p>
+    <p>GitHub: github.com/chandumoorman</p>
+  </div>
+</section>
+
+<footer class="footer">
+  © <span id="year"></span> Chandragiriprasad
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
   <button class="hamburger" id="hamburger">
     <span></span><span></span><span></span>
   </button>
