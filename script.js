@@ -1,96 +1,54 @@
-/* ===============================
-   MOBILE MENU
-=============================== */
+// MOBILE MENU
 const hamburger = document.getElementById("hamburger");
 const navlinks = document.getElementById("navlinks");
 
-if (hamburger && navlinks) {
-  hamburger.addEventListener("click", () => {
-    navlinks.classList.toggle("open");
-  });
+hamburger.onclick = () => navlinks.classList.toggle("open");
 
-  document.querySelectorAll(".navlinks a").forEach(link => {
-    link.addEventListener("click", () => {
-      navlinks.classList.remove("open");
-    });
-  });
-}
+// YEAR
+document.getElementById("year").textContent = new Date().getFullYear();
 
-
-/* ===============================
-   AUTO YEAR
-=============================== */
-const yearEl = document.getElementById("year");
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
-}
-
-
-/* ===============================
-   REVEAL ANIMATION
-=============================== */
+// SCROLL REVEAL
 const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
-
+window.addEventListener("scroll", () => {
   reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-
-    if (top < windowHeight - 80) {
+    if(el.getBoundingClientRect().top < window.innerHeight - 80){
       el.classList.add("show");
     }
   });
-}
+});
 
-window.addEventListener("load", revealOnScroll);
-window.addEventListener("scroll", revealOnScroll);
+// SCROLL PROGRESS BAR
+window.onscroll = () => {
+  const winScroll = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  document.getElementById("scrollProgress").style.width = (winScroll / height) * 100 + "%";
+};
 
-
-/* ===============================
-   MATRIX RAIN EFFECT
-=============================== */
+// MATRIX EFFECT
 const canvas = document.getElementById("matrix");
-
-if (canvas) {
+if(canvas){
   const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
+  const letters = "01ABCDEF";
+  const fontSize = 14;
+  const columns = canvas.width / fontSize;
+  const drops = Array(Math.floor(columns)).fill(1);
 
-  resizeCanvas();
-  window.addEventListener("resize", resizeCanvas);
+  function draw(){
+    ctx.fillStyle="rgba(2,6,23,0.07)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle="#00e0b8";
+    ctx.font=fontSize+"px monospace";
 
-  const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&@";
-  const fontSize = 16;
-  const columns = Math.floor(window.innerWidth / fontSize);
-
-  const drops = [];
-  for (let i = 0; i < columns; i++) {
-    drops[i] = 1;
-  }
-
-  function drawMatrix() {
-    ctx.fillStyle = "rgba(2,6,23,0.06)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "rgba(0,255,213,0.35)";
-    ctx.font = fontSize + "px monospace";
-
-    for (let i = 0; i < drops.length; i++) {
-      const text = letters[Math.floor(Math.random() * letters.length)];
-
-      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-        drops[i] = 0;
-      }
-
+    drops.forEach((y,i)=>{
+      const text=letters[Math.floor(Math.random()*letters.length)];
+      ctx.fillText(text,i*fontSize,y*fontSize);
+      if(y*fontSize>canvas.height && Math.random()>0.975) drops[i]=0;
       drops[i]++;
-    }
+    });
   }
+  setInterval(draw,40);
+       }
 
-  setInterval(drawMatrix, 50);
-}
