@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,44 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chandragiriprasad Moorman | Cyber Portfolio</title>
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-<!-- SCROLL PROGRESS BAR -->
 <div id="scrollProgress"></div>
 
-<!-- BACKGROUND LAYERS -->
 <div class="bg-layer">
-  <div class="bg-image"></div>
   <div class="bg-overlay"></div>
   <canvas id="matrix"></canvas>
 </div>
 
-<!-- NAVBAR -->
 <header class="navbar">
-  <div class="brand">
-    <span class="logo">CM</span>
-    <span class="brand-text">Chandragiriprasad</span>
-  </div>
+  <div class="logo">CM</div>
 
   <nav class="navlinks" id="navlinks">
     <a href="#about">About</a>
-    <a href="#education">Education</a>
     <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
     <a class="btn small" href="assets/resume/resume.pdf" download>Resume</a>
   </nav>
 
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="hamburger" id="hamburger">☰</div>
 </header>
 
 <main class="container">
@@ -50,80 +39,58 @@
 <!-- HERO -->
 <section class="hero reveal">
   <div>
-    <div class="status-pill">
-      <span class="dot"></span>
-      <span>Cybersecurity & AI-Driven Development</span>
-    </div>
-
-    <h1 class="title">
+    <h1>
       Building Secure Systems<br>
-      <span class="gradient-text typing"></span>
+      <span class="gradient">Cybersecurity & Android Development</span>
     </h1>
 
-    <p class="subtitle">
-      Final-year Computer Science Engineering student specializing in cybersecurity,
-      Android development, and intelligent backend systems.
+    <p>
+      Final-year Computer Science Engineering student with internship experience
+      in Android app development and academic exposure to cybersecurity and backend systems.
     </p>
 
-    <div class="hero-cta">
+    <div class="hero-btns">
       <a class="btn" href="#projects">View Projects</a>
-      <a class="btn ghost" href="#contact">Contact</a>
+      <a class="btn outline" href="#contact">Contact</a>
     </div>
   </div>
 
-  <!-- PROFILE CARD -->
-  <div class="profile-card">
-    <div class="pfp-wrap">
-      <img class="pfp" src="assets/img/profile.jpg" alt="Profile Photo">
-    </div>
-
-    <div class="profile-info">
-      <h2>Chandragiriprasad</h2>
-      <p>Cybersecurity • Android • Python • AI</p>
-    </div>
-
-    <div class="profile-divider"></div>
-
-    <div class="badges">
-      <span class="badge">OWASP Top 10</span>
-      <span class="badge">Burp Suite</span>
-      <span class="badge">Nmap</span>
-      <span class="badge">GenAI APIs</span>
-    </div>
+  <div class="card center">
+    <img src="assets/img/profile.jpg" class="profile">
+    <h3>Chandragiriprasad Moorman</h3>
+    <p class="muted">Cybersecurity • Android • Python</p>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section reveal">
   <div class="card">
-    <h2>About</h2>
-    <p>I am passionate about cybersecurity and secure software development.</p>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education" class="section reveal">
-  <div class="card">
-    <h2>Education</h2>
-    <p><b>B.E. Computer Science & Engineering</b></p>
-    <p>Cambridge Institute of Technology</p>
-    <p class="muted">Expected Graduation: 2026</p>
+    <h2>Professional Summary</h2>
+    <p>
+      Final-year CSE student with hands-on experience in Android development,
+      DDoS attack analysis, and web security testing.
+    </p>
+    <p>
+      Strong foundation in DBMS, computer networks, and secure software development.
+    </p>
+    <p>
+      Seeking entry-level cybersecurity or software roles to apply and strengthen practical skills.
+    </p>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience" class="section reveal">
   <div class="card">
-    <h2>Experience</h2>
-    <p><b>Android Developer Intern</b> — Mindmatrix</p>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section reveal">
-  <div class="card">
-    <h2>Skills</h2>
-    <p>Cybersecurity • Python • Android • Linux • REST APIs</p>
+    <h2>Internship Experience</h2>
+    <p><b>Android App Development Intern (Gen AI)</b></p>
+    <p class="muted">Mindmatrix | Jan 2026 – Present</p>
+    <ul>
+      <li>Developing Android apps using Java/Kotlin & Android Studio</li>
+      <li>Implemented UI components and application logic</li>
+      <li>Integrated Generative AI APIs into features</li>
+      <li>Debugging, testing, and performance improvements</li>
+    </ul>
   </div>
 </section>
 
@@ -131,7 +98,50 @@
 <section id="projects" class="section reveal">
   <div class="card">
     <h2>Projects</h2>
-    <p>DDoS Detection • Vulnerability Testing • Student Management System</p>
+
+    <p><b>DDoS Detection & Prevention System</b><br>
+    Built Python-based logic to detect abnormal traffic patterns and studied mitigation techniques.</p>
+
+    <p><b>Web Application Vulnerability Testing</b><br>
+    Identified SQL Injection & XSS vulnerabilities and mapped findings to OWASP Top 10.</p>
+
+    <p><b>Student Management System</b><br>
+    Developed Python & MySQL system implementing CRUD operations.</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section reveal">
+  <div class="card">
+    <h2>Technical Skills</h2>
+
+    <p><b>Cybersecurity:</b> Nmap, Burp Suite, Wireshark, OWASP Top 10</p>
+    <p><b>Programming:</b> Python, C, C++, JavaScript, SQL</p>
+    <p><b>Android:</b> Java/Kotlin, UI Layouts, Activity Lifecycle</p>
+    <p><b>Backend:</b> Flask, REST APIs, MySQL</p>
+    <p><b>Web:</b> HTML, CSS, Node.js, Express.js</p>
+    <p><b>Tools:</b> Git, GitHub, Linux, VS Code</p>
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section reveal">
+  <div class="card">
+    <h2>Certifications</h2>
+    <p>• DROP Certified Cybersecurity Course</p>
+    <p>• Introduction to Cybersecurity — Cisco</p>
+    <p>• Privacy & Security in Online Social Media — NPTEL</p>
+    <p>• VTU Student Development Program</p>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="section reveal">
+  <div class="card">
+    <h2>Achievements</h2>
+    <p>✔ Participated in Capture The Flag (CTF) competitions</p>
+    <p>✔ Completed networking & web security labs</p>
   </div>
 </section>
 
@@ -140,18 +150,18 @@
   <div class="card">
     <h2>Contact</h2>
     <p>📧 chandumoorman@gmail.com</p>
-    <p>💻 <a href="https://github.com/chandumoorman" target="_blank">github.com/chandumoorman</a></p>
+    <p>📱 +91 6363324704</p>
+    <p>💻 github.com/chandumoorman</p>
+    <p>🔗 linkedin.com/in/chandragiriprasad-moorman</p>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   © <span id="year"></span> Chandragiriprasad Moorman
 </footer>
 
 </main>
 
-<!-- JS -->
 <script src="./script.js"></script>
 </body>
       </html>
